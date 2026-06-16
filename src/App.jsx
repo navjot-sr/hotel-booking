@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/navbar'
-import Hero from './components/Hero'
+import Home from './pages/Home'
+import { Routes, Route } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
 const App = () => {
@@ -9,7 +10,11 @@ const App = () => {
   return (
     <div>
       {!isOwnerPath && <Navbar />}
-      <Hero />
+      <div className='min-h-[70vh]'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </div>
     </div>
   )
 }
