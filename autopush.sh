@@ -5,8 +5,11 @@ cd ~/Desktop/hotel-booking
 while true
 do
     git add .
-    git commit -m "Auto save $(date '+%Y-%m-%d %H:%M:%S')" 2>/dev/null
-    git push origin main
+
+    if ! git diff --cached --quiet; then
+        git commit -m "Auto save $(date '+%Y-%m-%d %H:%M:%S')"
+        git push origin main
+    fi
+
     sleep 300
 done
-
