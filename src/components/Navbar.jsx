@@ -5,8 +5,8 @@ import { assets } from "../assets/assets";
 const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Products', path: '/' },
-        { name: 'Contact', path: '/' },
+        { name: 'Hotels', path: '/rooms' },
+        { name: 'Experience', path: '/' },
         { name: 'About', path: '/' },
     ];
 
@@ -41,8 +41,7 @@ const Navbar = () => {
                     </a>
                 ))}
                 <button className={`border px-4 py-1 text-sm font-light rounded-full cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} transition-all`}>
-                    New Launch
-                </button>
+                    Dashboard                </button>
             </div>
 
             {/* Desktop Right */}
