@@ -23,8 +23,8 @@ const Navbar = () => {
 
     const { openSignIn } = useClerk();
     const { user } = useUser();
-    const { navigate } = useNavigate();
-    const { location } = useLocation;
+    const navigate = useNavigate();
+    const location = useLocation();
 
     React.useEffect(() => {
         const handleScroll = () => {
