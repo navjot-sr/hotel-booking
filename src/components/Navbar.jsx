@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useClerk, useUser, UserButton } from "@clerk/clerk-react";
+import { useClerk, useUser, UserButton } from "@clerk/react";
 
 const BookingIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
