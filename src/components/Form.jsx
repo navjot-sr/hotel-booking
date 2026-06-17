@@ -1,17 +1,53 @@
-import { cities } from "../assets/assets"
+import { cities } from "../assets/assets";
+
 const Form = () => {
-
     return (
-        <form className='bg-white text-gray-500 rounded-lg px-6 py-4  flex flex-col md:flex-row max-md:items-start gap-4 max-md:mx-auto'>
-
-            <div>
-                <div className='flex items-center gap-2'>
-                    <svg className="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+        <form
+            className="
+                w-full
+                max-w-7xl
+                mx-auto
+                bg-white
+                text-gray-500
+                rounded-lg
+                p-4
+                grid
+                grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-5
+                gap-4
+                shadow-lg
+            "
+        >
+            {/* Destination */}
+            <div className="w-full">
+                <div className="flex items-center gap-2">
+                    <svg
+                        className="w-4 h-4 text-gray-800"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+                        />
                     </svg>
                     <label htmlFor="destinationInput">Destination</label>
                 </div>
-                <input list='destinations' id="destinationInput" type="text" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" placeholder="Type here" required />
+
+                <input
+                    list="destinations"
+                    id="destinationInput"
+                    type="text"
+                    placeholder="Type here"
+                    required
+                    className="w-full rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm outline-none focus:border-black"
+                />
+
                 <datalist id="destinations">
                     {cities.map((city, index) => (
                         <option value={city} key={index} />
@@ -19,39 +55,114 @@ const Form = () => {
                 </datalist>
             </div>
 
-            <div>
-                <div className='flex items-center gap-2'>
-                    <svg className="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+            {/* Check In */}
+            <div className="w-full">
+                <div className="flex items-center gap-2">
+                    <svg
+                        className="w-4 h-4 text-gray-800"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+                        />
                     </svg>
-                    <label htmlFor="checkIn">Check in</label>
+                    <label htmlFor="checkIn">Check In</label>
                 </div>
-                <input id="checkIn" type="date" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+
+                <input
+                    id="checkIn"
+                    type="date"
+                    className="w-full rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm outline-none focus:border-black"
+                />
             </div>
 
-            <div>
-                <div className='flex items-center gap-2'>
-                    <svg className="w-4 h-4 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
-                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+            {/* Check Out */}
+            <div className="w-full">
+                <div className="flex items-center gap-2">
+                    <svg
+                        className="w-4 h-4 text-gray-800"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 10h16M8 14h8m-4-7V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+                        />
                     </svg>
-                    <label htmlFor="checkOut">Check out</label>
+                    <label htmlFor="checkOut">Check Out</label>
                 </div>
-                <input id="checkOut" type="date" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none" />
+
+                <input
+                    id="checkOut"
+                    type="date"
+                    className="w-full rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm outline-none focus:border-black"
+                />
             </div>
 
-            <div className='flex md:flex-col max-md:gap-2 max-md:items-center'>
-                <label htmlFor="guests">Guests</label>
-                <input min={1} max={4} id="guests" type="number" className=" rounded border border-gray-200 px-3 py-1.5 mt-1.5 text-sm outline-none  max-w-16" placeholder="0" />
+            {/* Guests */}
+            <div className="w-full">
+                <label htmlFor="guests" className="block">
+                    Guests
+                </label>
+
+                <input
+                    min={1}
+                    max={4}
+                    id="guests"
+                    type="number"
+                    placeholder="1"
+                    className="w-full rounded border border-gray-200 px-3 py-2 mt-1.5 text-sm outline-none focus:border-black"
+                />
             </div>
 
-            <button className='flex items-center justify-center gap-1 rounded-md bg-black py-3 px-4 text-white my-auto cursor-pointer max-md:w-full max-md:py-1' >
-                <svg className="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
-                    <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
-                </svg>
-                <span>Search</span>
-            </button>
+            {/* Search Button */}
+            <div className="flex items-end">
+                <button
+                    type="submit"
+                    className="
+                        w-full
+                        flex
+                        items-center
+                        justify-center
+                        gap-2
+                        rounded-md
+                        bg-black
+                        px-5
+                        py-2.5
+                        text-white
+                        cursor-pointer
+                        hover:bg-gray-800
+                        transition
+                    "
+                >
+                    <svg
+                        className="w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeWidth="2"
+                            d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+                        />
+                    </svg>
+                    <span>Search</span>
+                </button>
+            </div>
         </form>
     );
-}
+};
 
-export default Form
+export default Form;
